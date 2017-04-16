@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="../scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+    <input type="checkbox" id="cr" /><label for="cr">我已经阅读了上面制度</label>
+    <script type="text/javascript">
+     // $(document).ready(function(){ //等待dom元素加载完毕
+     // 	var $cr = $("#cr");
+     // 	var cr = $cr[0];
+     // 	//错误写法
+     // 	// if(cr.checked){
+     // 	// 	alert("感谢你的支持！你可以继续操作");
+     // 	// }
+     // 	$cr.click(function(){
+     // 		if(cr.checked){
+     // 			alert("感谢你的支持！你可以继续操作");
+     // 		}
+     // 	});
+     // });
+      $(document).ready(function(){
+      	var $cr = $("#cr");
+      	$cr.click(function(){
+      		if($cr.is(":checked")){
+      			alert("感谢你的支持！你可以继续操作(使用的jQuery对象)");
+      		}
+      	})
+      })
+    </script>
+    </body>
+</html>
