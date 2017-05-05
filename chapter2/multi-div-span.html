@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd>
+
+<html>
+	<head>
+		<!-- 这一段会影响汉字显示 -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		 <script src="../scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+		<title>各种div区块</title>
+
+		<style type="text/css">
+		
+		div, span, p{
+			width:140px;
+			height:140px;
+			margin:5px;
+			background: #aaa;
+			border:#000 1px solid;
+			float:left;
+			font-size:17px;
+			font-family: Verdana;
+		}
+
+		div.mini{
+			width:55px;
+			height:55px;
+			background-color:#aaa;
+			font-size:12px;
+		}
+
+		div.hide{
+			display:none;
+		}
+		</style>
+
+	</head>
+	<body>
+
+	<div class="one" id="one">
+	    id为one.class为one的div
+	    <div class="mini">class为mini</div>
+	</div>
+
+	<div class="one" id="two" title="test">
+		id为two.class为one.title为test的div
+		<div class="mini" title="other">class为mini.title为other</div>
+		<div class="mini" title="test">class为min.title为test</div>
+	</div>
+
+	<div class="one">
+		<div class="mini">class为min</div>
+		<div class="mini">class为min</div>
+		<div class="mini">class为min</div>
+		<div class="mini"></div>
+	</div>
+
+	<div class="one">
+		<div class="mini">class为min</div>
+		<div class="mini">class为min</div>
+		<div class="mini">class为min</div>
+		<div class="mini" title="tesst">class为mini.title为tesst</div>
+	</div>
+
+	<div style="display:none;" class="one">
+		style的display为"none"的div
+	</div>
+
+	<div class="hide">class为"hide"的div</div>
+
+	<div>
+	    包含input的type为"hidden"的div<input type="hidden" size="8" />
+	</div>
+
+	<span id="mover">正在执行动画的span元素</span>
+
+    <script type="text/javascript">
+         //以下是基础选择器
+         <!-- 改变id为one的元素的背景色 -->
+        // $("#one").css("background","#bbffaa");
+        <!-- 改变class为mini的所有元素的背景色 -->
+        // $(".mini").css("background", "#bbffaa");
+        <!-- 改变元素名是div的所有元素的背景色 -->
+        // $("div").css("background", "#bbffaa");
+        <!-- 改变所有元素的背景色 -->
+        // $("*").css("background", "#bbffaa");
+        <!-- 改变所有span元素和id为two的元素 -->
+        $("span, #two").css("background", "#bbffaa");
+
+    </script>
+
+	</body>
+</html>
